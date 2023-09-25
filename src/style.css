@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.checkbox {
+  appearance: none;
+  background-color: rgb(100 116 139);
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 50px;
+  height: 48px;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.checkbox::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  border-radius: 50%;
+  box-shadow: inset 50px 42px #fff;
+}
+
+.checkbox:checked::before {
+  transform: scale(1);
+}
+
+.deleteTodo {
+  min-width: 56px;
+}
+
+.input {
+  min-width: 300px;
+  margin: 0 20px;
+}
